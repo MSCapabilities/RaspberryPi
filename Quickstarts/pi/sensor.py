@@ -89,10 +89,10 @@ def iothub_client_telemetry_sample_run():
             # Send the message.
             print( "Sending message: %s" % message.get_string() )
             client.send_event_async(message, send_confirmation_callback, None)
-	    sense.show_message(temp + " degrees C")
-	    time.sleep(2)
+	    sense.show_message(temp + " C")
+	    time.sleep(1)
 	    sense.show_message(hum + "%")
-            time.sleep(3)
+            time.sleep(2)
 
     except IoTHubError as iothub_error:
         print ( "Unexpected error %s from IoTHub" % iothub_error )
